@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, Host, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   UntypedFormBuilder,
   UntypedFormGroup,
@@ -17,8 +17,6 @@ import { InvoiceService } from '../_services/invoice.service';
   styleUrl: './invoice-form.component.scss',
 })
 export class InvoiceFormComponent implements OnInit {
-  @HostBinding('class.flex-component') flexComponentClass: Host = true;
-
   public invoiceForm!: UntypedFormGroup;
   public clients: Client[] = [];
 
