@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "dateReceived": "2023-11-12",
+      "clientId": 1568,
+      "amount": 45000,
+      "dateDue": "2024-01-03"
+    },
+    {
+      "id": 1,
+      "dateReceived": "2024-02-14",
+      "clientId": 9334,
+      "amount": 10000,
+      "dateDue": "2024-04-16"
+    },
+    {
+      "id": 2,
+      "dateReceived": "2023-12-20",
+      "clientId": 1664,
+      "amount": 7500,
+      "dateDue": "2024-03-01"
+    },
+    {
+      "id": 3,
+      "dateReceived": "2023-07-18",
+      "clientId": 1209,
+      "amount": 500000,
+      "dateDue": "2024-07-17"
+    },
+    {
+      "id": 4,
+      "dateReceived": "2024-03-20",
+      "clientId": 3340,
+      "amount": 1200000,
+      "dateDue": "2024-09-12"
+    },
+    {
+      "id": 5,
+      "dateReceived": "2024-02-29",
+      "clientId": 1566,
+      "amount": 96000,
+      "dateDue": "2024-11-17"
+    }
+  ]
+}

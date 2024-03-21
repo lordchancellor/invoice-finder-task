@@ -1,0 +1,23 @@
+.content {
+  padding: 20px;
+
+  mat-card {
+    max-width: 330px;
+
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-bottom: 10px;
+
+      mat-form-field {
+        margin-bottom: 10px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 1568,
+      "shortName": "JGH",
+      "displayName": "JG Holdings Ltd",
+      "code": "JGH",
+      "active": true
+    },
+    {
+      "id": 17324,
+      "shortName": "CFG",
+      "displayName": "CF Group",
+      "code": "CFG",
+      "active": false
+    },
+    {
+      "id": 857,
+      "shortName": "AAC",
+      "displayName": "Azerothian Archives",
+      "code": "AAC",
+      "active": true
+    },
+    {
+      "id": 9946,
+      "shortName": "HFS",
+      "displayName": "Howe's Feed Stores",
+      "code": "HFS",
+      "active": false
+    },
+    {
+      "id": 821,
+      "shortName": "DJS",
+      "displayName": "David James Supplies",
+      "code": "DJS",
+      "active": true
+    },
+    {
+      "id": 3340,
+      "shortName": "HPLPM",
+      "displayName": "HPL Parchment Merchants",
+      "code": "HPLPM",
+      "active": true
+    },
+    {
+      "id": 9334,
+      "shortName": "KTS",
+      "displayName": "Kul Tiras Shipping",
+      "code": "KTS",
+      "active": false
+    },
+    {
+      "id": 1566,
+      "shortName": "DS",
+      "displayName": "Durotar Steel",
+      "code": "DS",
+      "active": true
+    },
+    {
+      "id": 1664,
+      "shortName": "WR",
+      "displayName": "Wind Runners",
+      "code": "WR",
+      "active": false
+    },
+    {
+      "id": 1209,
+      "shortName": "MM",
+      "displayName": "Miskatonic Museum",
+      "code": "MM",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">Bug Report</mat-toolbar>
+
+<div class="content">
+  <p>Our test team have highlighted the following issues with the app:</p>
+
+  <ul>
+    <li>Invoice Form</li>
+    <ul>
+      <li>
+        The client dropdown on the invoice form contains inactive clients; these
+        should be filtered out
+      </li>
+      <li>
+        The date pickers on the invoice form are not currently filtering. The
+        expectation is that the receipt date should prevent dates in the future
+        being selected and the due date should prevent dates in the past from
+        being selected
+      </li>
+      <li>
+        The "Invoice Amount" control on our invoice form is allowing non-numeric
+        characters. This control should allow numbers only
+      </li>
+      <li>
+        Clicking the "Reset" button on the form triggers validation for any
+        controls that are reset, this should not occur
+      </li>
+      <li>
+        Clicking the "Reset" button does not clear the selection in the "Client"
+        dropdown; we would expect this control to be reset along with the others
+      </li>
+    </ul>
+    <li>Invoice List</li>
+    <ul>
+      <li>
+        The list screen is inefficient in that it loads the clients, then loads
+        the invoices. If we have a delay on the client endpoint, our whole call
+        is held back. Can this be refactored to fetch all the data together and
+        act on it?
+      </li>
+    </ul>
+    <li>Miscellaneous</li>
+    <ul>
+      <li>
+        The app's main content is not correctly filling the screen. Our
+        expectations are that content outside of the left nav should fill the
+        entire remaining screen width
+      </li>
+      <li>
+        We have a 404 page, but it is not being hit when the user tries an
+        invalid URL. Please investigate
+      </li>
+    </ul>
+  </ul>
+</div>

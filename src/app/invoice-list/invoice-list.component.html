@@ -1,0 +1,42 @@
+<mat-toolbar color="primary"> Invoices </mat-toolbar>
+
+<div class="content">
+  <table
+    mat-table
+    matSort
+    [dataSource]="dataSource"
+    class="mat-elevation-z8"
+    *ngIf="dataSource; else noData"
+  >
+    <ng-container matColumnDef="clientName">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Client</th>
+      <td mat-cell *matCellDef="let invoice">{{ invoice.client?.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="invoiceAmount">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let invoice">
+        {{ invoice.amount | currency : "GBP" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="receiptDate">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Date of Receipt</th>
+      <td mat-cell *matCellDef="let invoice">
+        {{ invoice.receiptDate | date }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dueDate">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Date Due</th>
+      <td mat-cell *matCellDef="let invoice">{{ invoice.dueDate | date }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+
+  <ng-template #noData> No Data </ng-template>
+</div>

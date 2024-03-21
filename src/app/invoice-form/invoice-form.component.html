@@ -1,0 +1,78 @@
+<mat-toolbar color="primary">Add Invoice Details</mat-toolbar>
+
+<div class="content">
+  <mat-card>
+    <mat-card-content>
+      <form
+        *ngIf="invoiceForm"
+        [formGroup]="invoiceForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>Date Received</mat-label>
+          <input
+            matInput
+            [matDatepicker]="receiptDatePicker"
+            formControlName="receiptDate"
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="receiptDatePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #receiptDatePicker></mat-datepicker>
+          <mat-error>Field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Client</mat-label>
+          <mat-select formControlName="client">
+            <mat-option *ngFor="let client of clients" [value]="client">{{
+              client.name
+            }}</mat-option>
+          </mat-select>
+          <mat-error>Field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Invoice Amount</mat-label>
+          <input matInput placeholder="Amount" formControlName="amount" />
+          <mat-error>Field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Date Invoice Due</mat-label>
+          <input
+            matInput
+            [matDatepicker]="dueDatePicker"
+            formControlName="dueDate"
+          />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="dueDatePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #dueDatePicker></mat-datepicker>
+          <mat-error>Field is required</mat-error>
+        </mat-form-field>
+
+        <div class="buttons">
+          <button
+            mat-raised-button
+            type="button"
+            (click)="onReset()"
+            [disabled]="!invoiceForm.dirty"
+          >
+            Reset
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!invoiceForm.dirty"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
